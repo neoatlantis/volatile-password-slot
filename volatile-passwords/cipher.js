@@ -13,7 +13,7 @@ const HMAC_LENGTH = 16;
 const CIPHERTEXT_LENGTH = IV_LENGTH + HMAC_LENGTH + DATA_LENGTH;
 const CIPHER_ALGO = "aes-256-ctr";
 
-const SCRYPT_N = 16384;
+const SCRYPT_N = 131072;
 const SCRYPT_r = 8;
 const SCRYPT_p = 1;
 const SCRYPT_maxmem = 256 * 1024 * 1024;

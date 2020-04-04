@@ -10,6 +10,7 @@ const ddb = new AWS.DynamoDB();
 async function read(key){
     const params = {
         TableName: DYNAMODB_TABLE,
+        ConsistentRead: true,
         Key: {
             'uuid': { S: key }
         },
@@ -72,7 +73,7 @@ exports.handler = async (event) => {
         );
         return {
             statusCode: 200,
-            password: output,
+            body: output,
         };
     } catch(e){
         return {
